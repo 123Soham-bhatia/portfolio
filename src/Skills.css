@@ -1,0 +1,7 @@
+  .skills img{
+    width: 17vw;
+    height: 17vh;
+}
+.prev{
+    transform: rotateY(180deg);
+}

@@ -1,0 +1,107 @@
+.wrap {
+  
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflowing text */
+    display: inline-block; /* Ensure block element properties */
+    vertical-align: bottom; /* Align inline element to bottom */
+  }
+  
+  .txt-rotate>.wrap {
+    border-right: 0.08em solid #666; /* Create a cursor effect */
+    padding-right: 3px; /* Add padding to improve spacing */
+  }
+  .skill {
+    padding: 0 0 50px 0;
+    position: relative;
+    padding-top: 33vh;
+    color: white;
+  }
+  
+  .skill-bx {
+    background: #151515;
+    border-radius: 64px;
+    text-align: center;
+    margin-top: -60px;
+    padding-bottom: 20px;
+  }
+  
+  .skill h2 {
+    font-size: 45px;
+    font-weight: 700;
+  }
+  
+  .skill p {
+    color: #B8B8B8;
+    font-size: 18px;
+    justify-content: center;
+    width: 96%;
+    line-height: 1.5em;
+    margin: 14px 0 75px 0;
+  }
+  
+  .skill-slider {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .skill-slider .item img {
+    width: 55%;
+    margin: 0 auto 15px auto;
+    border-radius: 12%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  
+  .background-image-left {
+    top: 28%;
+    position: absolute;
+    bottom: 0;
+    width: 40%;
+    z-index: -4;
+  }
+  
+  .shadow-color-html {
+    box-shadow: 0 5px 3px -1px #FF6D00;
+  }
+  
+  .shadow-color-js {
+    box-shadow: 0 5px 3px -1px #fbbd61;
+  }
+  
+  .shadow-color-css {
+    box-shadow: 0 5px 3px -1px #319ef8;
+  }
+  
+  .shadow-color-reactjs {
+    box-shadow: 0 5px 3px -1px #6ebdfd;
+  }
+  
+  .shadow-color-nextjs {
+    box-shadow: 0 5px 3px -1px #ffffff;
+  }
+  
+  .shadow-color-tcs {
+    box-shadow: 0 5px 3px -1px #1b598b;
+  }
+  
+  .shadow-color-mysql {
+    box-shadow: 0 5px 3px -1px #0e3d64;
+  }
+  
+  .shadow-color-mdb {
+    box-shadow: 0 5px 3px -1px #32c03e;
+  }
+  
+  .shadow-color-njs {
+    box-shadow: 0 5px 3px -1px #13750f;
+  }
+  
+  .shadow-color-adi {
+    box-shadow: 0 5px 3px -1px #FF5722;
+  }
+  
+  

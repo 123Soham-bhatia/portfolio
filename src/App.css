@@ -1,0 +1,46 @@
+.App{
+  background-image: url('3d-space-background-with-fictional-planets-night-sky.jpg') ;
+  background-size: cover; /* This will make the background image cover the entire element */
+    background-position: center;
+}
+body{
+  background-color: black ;
+}
+.project-card {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.project-card.animate {
+  opacity: 1;
+}
+.letsConnect{
+cursor: pointer;
+border: 2px solid white;
+padding: 7px;
+height: 7.5vh;
+font-size: 27px;
+background: none;
+color: white;
+}
+button.letsConnect:hover {
+  animation-name: loading;
+  animation-duration: 7s;
+  animation-timing-function: step-start;
+  animation-delay: 0.2s;
+}
+
+@keyframes loading {
+  0% {
+    color: white;
+    background-color: transparent; /* Use transparent instead of none */
+  }
+  100% {
+    color: black;
+    background-color: white;
+  }
+}
+.touch:hover{
+  margin-left: 0vw;
+  margin-right: 0vw;
+}
