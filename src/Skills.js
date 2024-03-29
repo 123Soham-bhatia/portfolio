@@ -46,13 +46,13 @@ const Skills = () => {
             <p style={{ paddingTop: '4vh', fontSize: '25px' }}>In the realm of web development, proficiency in HTML, CSS, and JavaScript lays the foundation for crafting visually stunning and interactive user interfaces. Tailwind CSS expertise adds a layer of efficiency and consistency to design implementation. React.js proficiency enables the creation of dynamic and responsive front-end experiences, while Node.js and Express.js empower the development of scalable and robust server-side applications. Skills in MySQL and MongoDB facilitate effective data management and storage solutions. Git and GitHub proficiency ensures seamless collaboration and version control across projects. With these skills, I am equipped to tackle diverse web development challenges and deliver exceptional digital experiences</p>
 
             <div style={{ display: 'flex', justifyContent: 'space-between', paddingTop: '5vh' }}>
-                <img className='prev' onClick={prevHandler} src={next} alt='previous' style={{ width: '6vw' }} />
-                <div className='skills' style={{ justifyContent: 'space-between', gap:'1vw' }}>
+                <img className='prev' onClick={prevHandler} src={next} alt='previous' style={{ width: '6vw',cursor:'pointer' }} />
+                <div className='skills' style={{ display:'flex',justifyContent: 'space-between', gap:'1vw' }}>
                     <img src={photo[title].imageUrl} alt='id' />
                     <img src={photo[(title + 1) % photo.length].imageUrl} alt='id' />
                     <img src={photo[(title + 2) % photo.length].imageUrl} alt='id' />
                 </div>
-                <img onClick={nextHandler} src={next} alt='next' style={{ width: '6vw' }} />
+                <img onClick={nextHandler} src={next} alt='next' style={{ width: '6vw',cursor:"pointer" }} />
             </div>
         </div>
     );

@@ -18,7 +18,7 @@ const ProjectCard = () => {
 
     return (
         <div className={`project-card ${animate ? 'animate' : ''}`}>
-            <ul style={{ display: 'flex', gap: '30px', paddingLeft: '100px' }}>
+            <ul style={{ display:'flex',justifyContent:'space-between',padding:'3vh' }}>
                 <li><img style={{ width: '20vw', borderRadius: '20px', height: '23vh',cursor:'pointer' }} src={spotify} alt='spotify' /></li>
                 <li><img style={{ width: '20vw', borderRadius: '20px', height: '23vh',cursor:'pointer' }} src={news} alt='news' /></li>
                 <li><img style={{ width: '20vw', borderRadius: '20px', height: '23vh',cursor:'pointer' }} src={movie} alt='movie' /></li>
