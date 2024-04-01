@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import Typed from 'typed.js'; // Import Typed.js
 
+
 const About = () => {
     const textRef = useRef(null);
 
@@ -25,10 +26,8 @@ const About = () => {
       };
     }, []); 
     return (
-        <div id='home' style={{ paddingTop: '28vh', paddingLeft: '2vw' }}>
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <button style={{ background: '#55575D', color: 'white', height: '5vh', fontSize: '24px', padding: '5px',border:'2px solid white' }}>Welcome to my Portfolio</button>
-            </div>
+        <div id='home' style={{ paddingTop: '35vh', paddingLeft: '2vw' }}>
+           
             <h2 style={{ color: 'white', display: 'flex', justifyContent: 'center', fontSize: '60px', paddingTop: '3vh' }}>Soham Bhatia</h2>
 
             <span style={{ display: 'flex',justifyContent:'center',fontSize:"33px",color:'white',paddingTop:'1.5vh' }}>

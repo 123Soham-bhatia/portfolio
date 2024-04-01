@@ -11,13 +11,15 @@ const Footer = () => {
         }
       }
     return <div style={{
-        background:'linear-gradient(to right, #6450D2 20%, #1E1E20 80%)' , height:'13vh' , marginTop:'7vh',padding:'5px'
+        background:'linear-gradient(to right, #6450D2 20%, #1E1E20 80%)' , height:'12vh', display: 'flex' , justifyContent: 'space-between' , alignItems: 'center' , marginTop:'7vh',padding:'25px'
     }}  >
-        <div  >
-            <header style={{color:'white' , fontSize:'15px',display:'flex', justifyContent:'center',alignItems:'center'}} >Copyright ©2024. All Rights Reserved</header>
+
+      <div></div>
+        <div style={{color:'white' , fontSize:'15px' , alignSelf: 'flex-end'}}>
+              Copyright ©2024. All Rights Reserved
         </div>
-         <div  style={{display:'flex' , justifyContent:'flex-end' , alignItems:'center'}} >
-            <img onClick={() => scroll('home')} style={{ }} src={up} alt='up' >
+         <div >
+            <img onClick={() => scroll('home')} src={up} alt='up' >
             </img>
          </div>
     </div>;

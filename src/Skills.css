@@ -1,3 +1,9 @@
+#skills{
+  background-image: url('https://www.freepik.com/free-photo/closeup-shot-silver-forks-isolated_11342324.htm#fromView=search&page=1&position=42&uuid=65deafd3-4e67-4bf1-9425-34f4fa04734c') ;
+  background-size: cover; /* This will make the background image cover the entire element */
+    background-position: center;
+}
+  
   .skills img{
     width: 17vw;
     height: 17vh;

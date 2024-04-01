@@ -3,7 +3,7 @@ import './App.css' ;
 import About from './About';
 import Skills from './Skills';
 import Projects from './Projects';
-import ProjectCard from './ProjectCard';
+// import ProjectCard from './ProjectCard';
 import Touch from './Touch';
 import Footer from './Footer';
 
@@ -15,7 +15,7 @@ function App() {
       <About />
       <Skills />
       <Projects />
-      <ProjectCard />
+      {/* <ProjectCard /> */}
       <Touch />
       <Footer />
    
