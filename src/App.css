@@ -1,46 +1,273 @@
-.App{
-  background-image: url('3d-space-background-with-fictional-planets-night-sky.jpg') ;
-  background-size: cover; /* This will make the background image cover the entire element */
-    background-position: center;
-}
-body{
-  background-color: black ;
-}
-.project-card {
-  opacity: 0;
-  transition: opacity 0.5s ease;
+:root {
+  --primary: #7c3aed;
+  --primary-dark: #6d28d9;
+  --black: #000000;
+  --white: #ffffff;
+  --gray: #9ca3af;
 }
 
-.project-card.animate {
-  opacity: 1;
-}
-.letsConnect{
-cursor: pointer;
-border: 2px solid white;
-padding: 7px;
-height: 7.5vh;
-font-size: 27px;
-background: none;
-color: white;
-}
-button.letsConnect:hover {
-  animation-name: loading;
-  animation-duration: 7s;
-  animation-timing-function: step-start;
-  animation-delay: 0.2s;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@keyframes loading {
-  0% {
-    color: white;
-    background-color: transparent; /* Use transparent instead of none */
-  }
-  100% {
-    color: black;
-    background-color: white;
-  }
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--black);
+  color: var(--white);
+  line-height: 1.6;
 }
-.touch:hover{
-  margin-left: 0vw;
-  margin-right: 0vw;
+
+
+
+
+/* Hero Section */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
 }
+
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, var(--primary), #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  color: var(--gray);
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primary-btn {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.primary-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-3px);
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--white);
+}
+
+.secondary-btn:hover {
+  background: var(--primary);
+  transform: translateY(-3px);
+}
+
+
+/* Footer Styles */
+
+  /* Hero */
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  /* About */
+  .about-stats {
+    grid-template-columns: 1fr;
+  }
+
+  /* Projects */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact */
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer */
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+
+/* Utility Classes */
+.section {
+  padding: 5rem 2rem;
+  animation: fadeIn 1s ease-out;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+/* Form Placeholder Colors */
+::placeholder {
+  color: var(--gray);
+  opacity: 0.7;
+}
+
+/* Selection Color */
+::selection {
+  background: var(--primary);
+  color: var(--white);
+}
+
+/* Focus Outline */
+:focus {
+  outline: none;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+/* General container for the entire tech stack */
+.tech-stack-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #121212; /* Black background */
+  padding: 40px 20px;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Title styling */
+.tech-stack-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  color: #a855f7; /* Purple accent color */
+}
+
+/* Grid layout for icons */
+.tech-stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Each tech item (icon and text) */
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.tech-item:hover {
+  transform: scale(1.1);
+}
+
+/* Icon container with purple-black gradient */
+.icon-container {
+  width: 100px;
+  height: 100px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #4c1d95, #6d28d9); /* Purple gradient */
+  box-shadow: 0px 4px 10px rgba(108, 33, 162, 0.5); /* Purple shadow */
+  margin-bottom: 10px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.tech-item:hover .icon-container {
+  box-shadow: 0px 6px 15px rgba(165, 85, 247, 0.8); /* Glow effect on hover */
+  transform: scale(1.1);
+}
+
+/* Icon styling */
+.icon {
+  color: #ffffff;
+  filter: drop-shadow(0 2px 6px rgba(165, 85, 247, 0.5)); /* Soft purple shadow */
+  transition: transform 0.3s ease;
+}
+
+.tech-item:hover .icon {
+  transform: scale(1.15);
+  filter: drop-shadow(0 4px 8px rgba(165, 85, 247, 0.7));
+}
+
+/* Tech name styling */
+.tech-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #d1d5db; /* Light gray text */
+  transition: color 0.3s ease;
+}
+
+.tech-item:hover .tech-name {
+  color: #a855f7; /* Purple text on hover */
+}
+

@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --primary: #7c3aed;
+  --primary-dark: #6d28d9;
+  --primary-light: #a78bfa;
+  --background: #0a0118;
+  --text: #e9d5ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--background);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+.app {
+  position: relative;
+}
+
+/* Section transitions */
+.section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Loading screen */
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  background: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeOut 1s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+.loading-progress {
+  width: 200px;
+  height: 4px;
+  background: var(--primary);
+  border-radius: 2px;
+  animation: loading 2s ease-in-out;
+}
+
+@keyframes loading {
+  0% { transform: scaleX(0); }
+  100% { transform: scaleX(1); }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; visibility: hidden; }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+/* Utility classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}

@@ -1,23 +1,23 @@
-import Navbar from './Navbar';
 import './App.css' ;
+import Navbar from './Navbar';
+import Hero from './Hero';
 import About from './About';
 import Skills from './Skills';
 import Projects from './Projects';
-// import ProjectCard from './ProjectCard';
-import Touch from './Touch';
+import Contact from './Contact';
 import Footer from './Footer';
+
 
 function App() {
   return (
     <div className="App" style={{height:'100vh'}}>
-   
-      <Navbar />
-      <About />
-      <Skills />
-      <Projects />
-      {/* <ProjectCard /> */}
-      <Touch />
-      <Footer />
+   <Navbar/>
+   <Hero/>
+   <About/>
+   <Skills/>
+   <Projects/>
+   <Contact/>
+   <Footer/>
    
     </div>
   );

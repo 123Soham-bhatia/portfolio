@@ -1,61 +1,63 @@
-import React, { useState } from 'react';
-import html from '../src/html.png';
-import css from "../src/css.png";
-import js from "../src/js.png";
-import react from "../src/reactjs.png"
-import tailwind from "../src/tailwind.png";
-import nodejs from "../src/nodejs.png";
-import mongodb from "../src/mongodb.png";
-import express from "../src/express.png";
-import redux from "../src/redux.png";
-import git from "../src/git.png";
-import github from "../src/github.png";
-import mysql from "../src/mysql.png";
-import './Skills.css'
-import next from '../src/next.png'
+import React from "react";
+import {
+  FileCode,
+  Blocks,
+  Code,
+  Terminal,
+  Database,
+  Box,
+  GitBranch,
+  Braces,
+  Container,
+  Globe,
+  Flame,
+  Binary,
+  Server,
+  Laptop,
+  Cloud,
+  Layout,
+} from "lucide-react";
 
-const Skills = () => {
-    const photo = [
-        { id: 1, imageUrl: html },
-        { id: 2, imageUrl: css },
-        { id: 3, imageUrl: js },
-        { id: 4, imageUrl: tailwind },
-        { id: 5, imageUrl: react },
-        { id: 6, imageUrl: nodejs },
-        { id: 7, imageUrl: express },
-        { id: 8, imageUrl: redux },
-        { id: 9, imageUrl: git },
-        { id: 10, imageUrl: github },
-        { id: 11, imageUrl: mysql },
-        { id: 12, imageUrl: mongodb }
-    ]
+const TechStack = () => {
+  const technologies = [
+    { name: "HTML5", icon: FileCode },
+    { name: "CSS3", icon: Blocks },
+    { name: "JavaScript", icon: Braces },
+    { name: "TypeScript", icon: Code },
+    { name: "React", icon: Box },
+    { name: "Next.js", icon: Layout },
+    { name: "Node.js", icon: Terminal },
+    { name: "MongoDB", icon: Database },
+    { name: "Git", icon: GitBranch },
+    { name: "Docker", icon: Container },
+    { name: "AWS", icon: Cloud },
+    { name: "Express", icon: Server },
+    { name: "Firebase", icon: Flame },
+    { name: "C++", icon: Binary },
+    { name: "REST APIs", icon: Globe },
+    { name: "VS Code", icon: Laptop },
+    { name: "Python", icon: Code },
+    { name: "TailwindCSS", icon: Blocks },
+  ];
 
-    const [title, setTitle] = useState(0);
-
-    const prevHandler = () => {
-        setTitle((title - 1 + photo.length) % photo.length);
-    }
-
-    const nextHandler = () => {
-        setTitle((title + 1) % photo.length);
-    }
-
-    return (
-        <div id='skills' style={{ background: '#1E1E20', marginTop: '39vh', color: 'white', marginLeft: '5vw', marginRight: '5vw', padding: '80px', borderRadius: '10px' }}>
-            <h2 style={{ textAlign: 'center', paddingTop: '3vh', fontSize: '32px' }}>Skills</h2>
-            <p style={{ paddingTop: '4vh', fontSize: '25px' }}>In the realm of web development, proficiency in HTML, CSS, and JavaScript lays the foundation for crafting visually stunning and interactive user interfaces. Tailwind CSS expertise adds a layer of efficiency and consistency to design implementation. React.js proficiency enables the creation of dynamic and responsive front-end experiences, while Node.js and Express.js empower the development of scalable and robust server-side applications. Skills in MySQL and MongoDB facilitate effective data management and storage solutions. Git and GitHub proficiency ensures seamless collaboration and version control across projects. With these skills, I am equipped to tackle diverse web development challenges and deliver exceptional digital experiences</p>
-
-            <div style={{ display: 'flex', justifyContent: 'space-between', paddingTop: '5vh' }}>
-                <img className='prev' onClick={prevHandler} src={next} alt='previous' style={{ width: '6vw',cursor:'pointer' }} />
-                <div className='skills' style={{ display:'flex',justifyContent: 'space-between', gap:'1vw' }}>
-                    <img src={photo[title].imageUrl} alt='id' />
-                    <img src={photo[(title + 1) % photo.length].imageUrl} alt='id' />
-                    <img src={photo[(title + 2) % photo.length].imageUrl} alt='id' />
-                </div>
-                <img onClick={nextHandler} src={next} alt='next' style={{ width: '6vw',cursor:"pointer" }} />
+  return (
+    <div className="tech-stack-container" id="skills">
+      <h2 className="tech-stack-title">Technology Stack</h2>
+      <div className="tech-stack-grid">
+        {technologies.map((tech) => {
+          const IconComponent = tech.icon;
+          return (
+            <div key={tech.name} className="tech-item">
+              <div className="icon-container">
+                <IconComponent size={60} className="icon" />
+              </div>
+              <span className="tech-name">{tech.name}</span>
             </div>
-        </div>
-    );
-}
+          );
+        })}
+      </div>
+    </div>
+  );
+};
 
-export default Skills;
+export default TechStack;

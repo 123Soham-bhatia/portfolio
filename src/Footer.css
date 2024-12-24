@@ -1,0 +1,189 @@
+.footer {
+    background: linear-gradient(to right, #0a0a0a, #2d1b3c68, #1a0b2e);
+    color: #b3b3b3;
+    padding: 48px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Background Effects */
+  .footer-background {
+    position: absolute;
+    inset: 0;
+    opacity: 0.1;
+  }
+  
+  .glowing-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, #3b82f6, #8b5cf6, #ec4899);
+  }
+  
+  .blur-circle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 256px;
+    height: 256px;
+    background: #3b82f6;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.2;
+    transform: translate(50%, 50%);
+  }
+  
+  /* Container */
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+  
+  /* Grid Layout */
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+  }
+  
+  /* Responsive Grid */
+  @media (max-width: 768px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+  }
+  
+  /* Footer Sections */
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .section-title {
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  /* Brand Section */
+  .signature {
+    height: 45px;
+    width: auto;
+    margin-bottom: 16px;
+  }
+  
+  .brand-description {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+  
+  /* Quick Links */
+  .quick-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .quick-links a {
+    color: #b3b3b3;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .quick-links a:hover {
+    color: white;
+  }
+  
+  /* Social Icons */
+  .social-icons {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .social-icons a {
+    color: #b3b3b3;
+    transition: color 0.2s ease;
+  }
+  
+  .social-icons a:hover {
+    color: white;
+  }
+  
+  /* Contact Info */
+  .contact-info {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
+  }
+  
+  /* Footer Bottom */
+  .footer-bottom {
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 1px solid #404040;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-bottom {
+      flex-direction: column;
+      gap: 16px;
+      text-align: center;
+    }
+  }
+  
+  .copyright {
+    font-size: 0.875rem;
+  }
+  
+  .legal-links {
+    display: flex;
+    gap: 24px;
+  }
+  
+  .legal-links a {
+    font-size: 0.875rem;
+    color: #b3b3b3;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .legal-links a:hover {
+    color: white;
+  }
+  
+  /* Animation for hover effects */
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.8);
+    }
+    100% {
+      box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+    }
+  }
+  
+  /* Add subtle animations to links on hover */
+  .footer a:hover {
+    animation: glow 2s infinite;
+  }
